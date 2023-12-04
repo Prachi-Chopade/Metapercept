@@ -1,0 +1,44 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Sample {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://techpub-connect-demo.netlify.app/html/contactus");
+		System.out.println(driver.getTitle()); 
+		
+		driver.findElement(By.xpath("/html/body/main/div/section[2]/div/div/div[3]/div/form/div[1]/input")).sendKeys("Prachi Chopade");
+		
+		driver.findElement(By.xpath("/html/body/main/div/section[2]/div/div/div[3]/div/form/div[3]/input")).sendKeys("abd@gmail.com");
+		
+		driver.findElement(By.xpath("/html/body/main/div/section[2]/div/div/div[3]/div/form/div[2]/input")).sendKeys("9158501170");
+		
+		driver.findElement(By.id("commnent")).sendKeys("hdgbcvjdikod");
+		
+		driver.findElement(By.className("theme_btn border_btn active mt-20")).click();
+		
+		
+		
+		driver.findElement(By.xpath("/html/body/main/section[2]/div/div/div/div[2]/div/div/form/input")).sendKeys("abd@gmail.com");
+		driver.findElement(By.className("sub_btn")).click();
+		
+		
+		driver.findElement(By.className("fab fa-facebook-f")).click();
+		Thread.sleep(3);
+		driver.findElement(By.className("fab fa-twitter")).click();
+		Thread.sleep(3);
+		driver.findElement(By.className("fab fa-linkedin-in")).click();
+		Thread.sleep(3);
+		driver.findElement(By.className("fab fa-google-plus-g")).click();
+		
+		driver.quit();
+		
+
+	}
+
+}
